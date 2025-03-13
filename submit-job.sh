@@ -1,7 +1,7 @@
 #! /bin/bash
 SCRIPT_NAME=$1
 WORKDIR="./jobs"
-RAY_ADDRESS="http://127.0.0.1:8265"
+RAY_ADDRESS="http://raycluster-kuberay-head-svc.svc.cluster.local:8265"
 
 
 if [ -z "$SCRIPT_NAME" ]; then
