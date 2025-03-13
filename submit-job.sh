@@ -1,7 +1,7 @@
 #! /bin/bash
 SCRIPT_NAME=$1
 WORKDIR="./jobs"
-RAY_ADDRESS="http://raycluster-kuberay-head-svc.svc.cluster.local:8265"
+export RAY_ADDRESS="http://raycluster-kuberay-head-svc.svc.cluster.local:8265"
 
 
 if [ -z "$SCRIPT_NAME" ]; then
@@ -10,4 +10,4 @@ if [ -z "$SCRIPT_NAME" ]; then
 fi
 
 
-ray job submit --working-dir $WORKDIR --address $RAY_ADDRESS --no-wait -- python $SCRIPT_NAME 
+ray job submit --working-dir $WORKDIR --no-wait -- python $SCRIPT_NAME 
