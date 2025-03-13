@@ -1,4 +1,4 @@
-#! /bin/zsh 
+#! /bin/bash
 SCRIPT_NAME=$1
 WORKDIR="./jobs"
 RAY_ADDRESS="http://127.0.0.1:8265"
