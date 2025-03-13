@@ -10,4 +10,4 @@ if [ -z "$SCRIPT_NAME" ]; then
 fi
 
 
-ray job submit --working-dir $WORKDIR --address $RAY_ADDRESS -- python $SCRIPT_NAME 
+ray job submit --working-dir $WORKDIR --address $RAY_ADDRESS --no-wait -- python $SCRIPT_NAME 
